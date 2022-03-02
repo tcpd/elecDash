@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+#map{
+  width:50vw;
+}
+.flex-container_map {
+  display: flex;
+  flex-direction: row;
+}
+.flex-item-left_map{
+<!--   background-color: #f1f1f1; -->
+  flex: 50%;
+  align-items: stretch;
+}
+.flex-item-right_map {
+<!--   background-color: dodgerblue; -->
+  flex: 50%;
+  align-items: stretch;
+}
+@media (max-width: 700px) {
+  .flex-container_map {
+    flex-direction: column;
+  }
+ 
+#map{
+  width:90vw;
+}
+ 
+}
+
+
+* {
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial;
+}
+.lokdhaba_link a {
+  float: right;
+  display: block;
+  color: #B83027;
+  text-align: center;
+  padding: 1vh 2vw 1vh 2vw;
+  text-decoration: none;
+  font-size: clamp(10px, 3vw, 17px);
+  border: 3px solid #B83027;
+  margin:0.5em;
+
+}
+
+.lokdhaba_link a:hover {
+  background-color: #B83027;
+  color: white;
+}
+
+
+#title{
+/*  background-color: #ff4c8d; */
+  text-align:center;
+  font-size:clamp(10px, 4vw, 20px);
+  width:80vw;
+  margin-left:5vw;
+  padding:0px 0px 0px 0px;
+  margin-bottom:0px;
+
+}
+#subheading{
+/*  background-color: #b575e5; */
+  width:90vw;
+  text-align:center;
+  font-size:clamp(10px, 3vw, 15px);
+}
+
+#india{
+  width:50vw;
+  max-width:700px;
+}
+
+
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1vh 2vw 1vh 2vw;
+  text-decoration: none;
+  font-size: clamp(10px, 3vw, 17px);
+  border-radius: 20px;
+  background-color: #B83027;
+  margin:0.5em;
+
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+/*   background-color: #f1f1f1; */
+  flex: 50%;
+}
+
+.flex-item-right {
+/*   background-color: dodgerblue; */
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media screen and (max-width: 600px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+  
+  #logo_container {
+/*  background-color: #cccc8d; */
+  width:20vw;
+  margin-left:35vw;
+  max-width:80px;
+}
+ #logo
+{ width:20vw;
+  height:auto;
+  max-width:100px;
+}
+  #click_text{
+/* background-color: #b5758f; */
+  font-size:clamp(10px,3vw, 18px);
+  margin-right:5vw;
+  width:90vw;
+  text-align:center;
+}
+
+.topnav {
+  overflow: hidden;
+  margin-left:5vw;
+  width:90vw;
+}
+
+
+
+ 
+}
+
+
+@media (min-width: 600px){
+  
+  #logo_container {
+/*   background-color: #cccc8d; */
+  width:0vw;
+  margin-left:0vw;
+}
+ #logo
+{ height:auto;
+  width:100px;
+  margin-left:calc(45vw - 50px);
+}
+  
+  #click_text{
+/*   background-color: #b5758f; */
+  font-size:clamp(10px,3vw, 18px);
+  margin-top:calc(10vw);
+  text-align:center;
+}
+  
+ #india{
+  width:50vw;
+  max-width:530px;
+} 
+}
+
+@media screen and  (min-width: 1100px) and (max-width:3000px){
+  
+  .topnav {
+  overflow: hidden;
+  position:absolute;
+  display:block;
+}
+
+}
+
+@media screen and (max-width: 1100px) 
+{
+  .topnav {
+  overflow: hidden;
+  margin-left:calc(6px + 5vw);
+  width:70vw;
+
+}
+
+}
+
+
+#frame{
+	/*   background-color:#9F2B68; */
+	  margin-left:25vw;
+	  width:50vw;
+	}
+
+#voter{
+	  width:50vw;
+	  margin-left:0vw;
+	}
+	
+@media (max-width: 700px){
+	
+	#frame{
+	/*   background-color:#9F2B68; */
+	  margin-left:10vw;
+	  width:80vw;
+	}
+
+	#voter{
+	  width:80vw;
+	  margin-left:0vw;
+	}
+	
+	}
+	
+</style>
+
+</head>
+<body>
+
+<div id="title"> <h1> 2017 Assembly Elections at a glance<h1></div>
+<div id='Backtotop'></div>
+
+<div id="logo_container"><a href="https://lokdhaba.ashoka.edu.in/"><img  id="logo" src="https://github.com/srishti-gupta-me/Election_Dashboard/blob/main/logo.png?raw=true"></a></div>
+
+
+<div class="flex-container">
+  
+  <div class="flex-item-left">
+    <img id="india" src="https://github.com/srishti-gupta-me/Election_Dashboard/blob/main/map.png?raw=true"/ align="middle">
+  </div>
+  <div class="flex-item-right">
+    <div id="click_text"><p>Click on any of the tabs below to see what the numbers looked like in the last round of elections for the poll bound states of Punjab, Uttarakhand, Uttar Pradesh, Manipur and Goa.</p></div>
+    <div class="topnav">
+      <a href="#1">Voter Turnout</a>
+      <a href="#2">Constituencies</a>
+      <a href="#3">Representation by Gender</a>
+      <a href="#4">Party Seat Share</a>
+      <a href="#5">Seat Share across States (INC & BJP)</a>
+    </div><br><br><br>
+    <div class="lokdhaba_link"><a style="text-decoration: none; "href="https://lokdhaba.ashoka.edu.in/">Go to Lok Dhaba</a></div>
+  </div>
+  
+</div>
+
+<hr style="margin:6vw;"/>
+
+<div id='1'></div>
+<div style="text-align:center;"><h1>Voter turnout</h1></div>
+
+<div id="frame"><iframe id ="voter" title="" aria-label="Map" id="datawrapper-chart-wFZd3" src="https://datawrapper.dwcdn.net/wFZd3/4/" scrolling="no" frameborder="0" style="border: none;" width="600" height="628"></iframe></iframe></div>
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Serial Number</th>
+      <th>State/Year</th>
+      <th>2012</th>
+      <th>2017</th>
+      <th>Link to historical data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Goa</td>
+      <td>81.73</td>
+      <td>82.42</td>
+      <td><a href="https://lokdhaba.ashoka.edu.in/data-vis?et=AE&st=Goa&var=Turnout&viz=voterTurnoutChart">Link for Goa</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Manipur</td>
+      <td>79.19</td>
+      <td>86.59</td>
+      <td><a href="https://lokdhaba.ashoka.edu.in/data-vis?et=AE&st=Manipur&var=Turnout&viz=voterTurnoutChart">Link for Manipur</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Punjab</td>
+      <td>77.37</td>
+      <td>77.10</td>
+      <td><a href="https://lokdhaba.ashoka.edu.in/data-vis?et=AE&st=Punjab&var=Turnout&viz=voterTurnoutChart">Link for Punjab</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Uttar_Pradesh</td>
+      <td>60.03</td>
+      <td>61.22</td>
+      <td><a href="https://lokdhaba.ashoka.edu.in/data-vis?et=AE&st=Uttar_Pradesh&var=Turnout&viz=voterTurnoutChart">Link for Uttar_Pradesh</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Uttarakhand</td>
+      <td>65.64</td>
+      <td>65.41</td>
+      <td><a href="https://lokdhaba.ashoka.edu.in/data-vis?et=AE&st=Uttarakhand&var=Turnout&viz=voterTurnoutChart">Link for Uttarakhand</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="text-align:right;"><a href=#Backtotop>Back to top</a><div>
+
+<hr style="margin:6vw;"/>
+
+<div id='2'></div>
+<div style="text-align:center;"><h1>Number of assembly constituencies</h1></div>
+
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>                <div id="885b50f0-e0e6-4ca2-a633-6eb185545c6a" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("885b50f0-e0e6-4ca2-a633-6eb185545c6a")) {                    Plotly.newPlot(                        "885b50f0-e0e6-4ca2-a633-6eb185545c6a",                        [{"alignmentgroup":"True","customdata":[[39,40,"General"],[40,60,"General"],[83,117,"General"],[318,403,"General"],[55,70,"General"]],"hovertemplate":"<b>%{hovertext}</b><br><br>Percentage=%{y}<br>Number of Assembly constituencies for Category=%{customdata[0]}<br>Total Number of Assembly constituencies=%{customdata[1]}<extra></extra>","hovertext":["General","General","General","General","General"],"legendgroup":"General","marker":{"color":"lightgreen","pattern":{"shape":""}},"name":"General","offsetgroup":"General","orientation":"v","showlegend":true,"textposition":"auto","x":["Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand"],"xaxis":"x","y":[97.5,66.67,70.94,78.91,78.57],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[1,40,"Scheduled Caste"],[1,60,"Scheduled Caste"],[34,117,"Scheduled Caste"],[85,403,"Scheduled Caste"],[13,70,"Scheduled Caste"]],"hovertemplate":"<b>%{hovertext}</b><br><br>Percentage=%{y}<br>Number of Assembly constituencies for Category=%{customdata[0]}<br>Total Number of Assembly constituencies=%{customdata[1]}<extra></extra>","hovertext":["Scheduled Caste","Scheduled Caste","Scheduled Caste","Scheduled Caste","Scheduled Caste"],"legendgroup":"Scheduled Caste","marker":{"color":"yellow","pattern":{"shape":""}},"name":"Scheduled Caste","offsetgroup":"Scheduled Caste","orientation":"v","showlegend":true,"textposition":"auto","x":["Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand"],"xaxis":"x","y":[2.5,1.67,29.06,21.09,18.57],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[19,60,"Scheduled Tribe"],[2,70,"Scheduled Tribe"]],"hovertemplate":"<b>%{hovertext}</b><br><br>Percentage=%{y}<br>Number of Assembly constituencies for Category=%{customdata[0]}<br>Total Number of Assembly constituencies=%{customdata[1]}<extra></extra>","hovertext":["Scheduled Tribe","Scheduled Tribe"],"legendgroup":"Scheduled Tribe","marker":{"color":"green","pattern":{"shape":""}},"name":"Scheduled Tribe","offsetgroup":"Scheduled Tribe","orientation":"v","showlegend":true,"textposition":"auto","x":["Manipur","Uttarakhand"],"xaxis":"x","y":[31.67,2.86],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"State"},"showline":true,"linewidth":1,"linecolor":"grey"},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Percentage"},"showline":true,"linewidth":1,"linecolor":"grey"},"legend":{"title":{"text":"Constituency_Type"},"tracegroupgap":0,"yanchor":"bottom","y":0.99,"xanchor":"right","x":0.99},"margin":{"t":60},"barmode":"group","height":400,"plot_bgcolor":"White"},                        {"responsive": true}                    )                };                            </script>        </div>
+
+
+<div style="text-align:right;"><a href=#Backtotop>Back to top</a><div>
+<hr style="margin:6vw;"/>
+
+<div id='3'></div>
+<div style="text-align:center;"><h1>Winners and contestants by gender</h1></div>
+
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>                <div id="23a76705-e865-4d92-8ef1-7085db0a2bfe" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("23a76705-e865-4d92-8ef1-7085db0a2bfe")) {                    Plotly.newPlot(                        "23a76705-e865-4d92-8ef1-7085db0a2bfe",                        [{"customdata":[[7.57,19.0,251.0],[4.14,11.0,266.0],[7.07,81.0,1145.0],[9.93,482.0,4853.0],[9.73,62.0,637.0]],"hovertemplate":"Percentage: %{customdata[0]}<br>Number of female contestants: %{customdata[1]}<br>Total number of contestants: %{customdata[2]}","marker":{"color":"purple"},"name":"Female","x":["Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand"],"y":[7.57,4.14,7.07,9.93,9.73],"type":"bar"},{"customdata":[[92.43,232.0,251.0],[95.86,255.0,266.0],[92.84,1063.0,1145.0],[90.05,4370.0,4853.0],[89.95,573.0,637.0]],"hovertemplate":"Percentage: %{customdata[0]}<br>Number of male contestants: %{customdata[1]}<br>Total number of contestants: %{customdata[2]}","marker":{"color":"lightblue"},"name":"Male","x":["Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand"],"y":[92.43,95.86,92.84,90.05,89.95],"type":"bar"}],                        {"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"title":{"text":"Contestants","y":0.01,"x":0.5,"xanchor":"center","yanchor":"bottom"},"legend":{"yanchor":"bottom","y":0.99,"xanchor":"right","x":0.99},"plot_bgcolor":"White","barmode":"stack","xaxis":{"title":{"text":"State"},"showline":true,"linewidth":1,"linecolor":"grey"},"yaxis":{"title":{"text":"Percentage"},"showline":true,"linewidth":1,"linecolor":"grey"}},                        {"responsive": true}                    )                };                            </script>        </div>
+        
+        
+        
+
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>                <div id="af6b3928-5770-4dd3-a3e7-b33b888aeade" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("af6b3928-5770-4dd3-a3e7-b33b888aeade")) {                    Plotly.newPlot(                        "af6b3928-5770-4dd3-a3e7-b33b888aeade",                        [{"customdata":[[5.0,2.0,40.0],[3.33,2.0,60.0],[5.13,6.0,117.0],[10.42,42.0,403.0],[7.14,5.0,70.0]],"hovertemplate":"Percentage: %{customdata[0]}<br>Number of female winner: %{customdata[1]}<br>Total number of winner: %{customdata[2]}","marker":{"color":"purple"},"name":"Female","x":["Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand"],"y":[5.0,3.33,5.13,10.42,7.14],"type":"bar"},{"customdata":[[95.0,38.0,40.0],[96.67,58.0,60.0],[94.87,111.0,117.0],[89.58,361.0,403.0],[92.86,65.0,70.0]],"hovertemplate":"Percentage: %{customdata[0]}<br>Number of male winner: %{customdata[1]}<br>Total number of winner: %{customdata[2]}","marker":{"color":"lightblue"},"name":"Male","x":["Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand"],"y":[95.0,96.67,94.87,89.58,92.86],"type":"bar"}],                        {"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"title":{"text":"Winners","y":0.01,"x":0.5,"xanchor":"center","yanchor":"bottom"},"legend":{"yanchor":"bottom","y":0.99,"xanchor":"right","x":0.99},"plot_bgcolor":"White","barmode":"stack","xaxis":{"title":{"text":"State"},"showline":true,"linewidth":1,"linecolor":"grey"},"yaxis":{"title":{"text":"Percentage"},"showline":true,"linewidth":1,"linecolor":"grey"}},                        {"responsive": true}                    )                };                            </script>        </div>
+        
+
+
+<p style="text-align:left; margin-left:6vw;"><br>Note: Total contestants also contain 4 records marked as 'Other' (Lok Dhaba)</p>
+<div style="text-align:right;"><a href=#Backtotop>Back to top</a><div>
+<hr style="margin:6vw;"/>
+
+
+<div id='4'></div>
+<div style="text-align:center;"><h1>Seat share of top 5 parties</h1></div>
+
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>                <div id="05e5b0f2-4183-4c32-bbc4-8f1035eba345" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("05e5b0f2-4183-4c32-bbc4-8f1035eba345")) {                    Plotly.newPlot(                        "05e5b0f2-4183-4c32-bbc4-8f1035eba345",                        [{"branchvalues":"total","customdata":[["Manipur","AITC",1,1.67],["Punjab","LIP",2,1.71],["Uttar Pradesh","INC",7,1.74],["Uttar Pradesh","ADAL",9,2.23],["Uttar Pradesh","Other",9,2.23],["Punjab","INC",77,65.81],["Goa","Other",1,2.5],["Punjab","BJP",3,2.56],["Uttarakhand","IND",2,2.86],["Manipur","Other",2,3.34],["Uttar Pradesh","BSP",19,4.71],["Uttar Pradesh","BJP",312,77.42],["Goa","MAG",3,7.5],["Goa","GFP",3,7.5],["Manipur","NPF",4,6.67],["Manipur","NPEP",4,6.67],["Goa","IND",3,7.5],["Uttar Pradesh","SP",47,11.66],["Punjab","SAD",15,12.82],["Uttarakhand","INC",11,15.71],["Punjab","AAAP",20,17.09],["Goa","BJP",13,32.5],["Uttarakhand","BJP",57,81.43],["Manipur","BJP",21,35.0],["Goa","INC",17,42.5],["Manipur","INC",28,46.67],["Punjab","AAAP",20,17.09],["Uttar Pradesh","ADAL",9,2.23],["Manipur","AITC",1,1.67],["Goa","BJP",13,32.5],["Manipur","BJP",21,35.0],["Punjab","BJP",3,2.56],["Uttar Pradesh","BJP",312,77.42],["Uttarakhand","BJP",57,81.43],["Uttar Pradesh","BSP",19,4.71],["Goa","GFP",3,7.5],["Goa","INC",17,42.5],["Manipur","INC",28,46.67],["Punjab","INC",77,65.81],["Uttar Pradesh","INC",7,1.74],["Uttarakhand","INC",11,15.71],["Goa","IND",3,7.5],["Uttarakhand","IND",2,2.86],["Punjab","LIP",2,1.71],["Goa","MAG",3,7.5],["Manipur","NPEP",4,6.67],["Manipur","NPF",4,6.67],["Goa","Other",1,2.5],["Manipur","Other",2,3.34],["Uttar Pradesh","Other",9,2.23],["Punjab","SAD",15,12.82],["Uttar Pradesh","SP",47,11.66],["Goa","(?)",40,"(?)"],["Manipur","(?)",60,"(?)"],["Punjab","(?)",117,"(?)"],["Uttar Pradesh","(?)",403,"(?)"],["Uttarakhand","(?)",70,"(?)"]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"Seat: %{customdata[2]}","ids":["Manipur/AITC/1.67","Punjab/LIP/1.71","Uttar Pradesh/INC/1.74","Uttar Pradesh/ADAL/2.23","Uttar Pradesh/Other/2.23","Punjab/INC/65.81","Goa/Other/2.5","Punjab/BJP/2.56","Uttarakhand/IND/2.86","Manipur/Other/3.34","Uttar Pradesh/BSP/4.71","Uttar Pradesh/BJP/77.42","Goa/MAG/7.5","Goa/GFP/7.5","Manipur/NPF/6.67","Manipur/NPEP/6.67","Goa/IND/7.5","Uttar Pradesh/SP/11.66","Punjab/SAD/12.82","Uttarakhand/INC/15.71","Punjab/AAAP/17.09","Goa/BJP/32.5","Uttarakhand/BJP/81.43","Manipur/BJP/35.0","Goa/INC/42.5","Manipur/INC/46.67","Punjab/AAAP","Uttar Pradesh/ADAL","Manipur/AITC","Goa/BJP","Manipur/BJP","Punjab/BJP","Uttar Pradesh/BJP","Uttarakhand/BJP","Uttar Pradesh/BSP","Goa/GFP","Goa/INC","Manipur/INC","Punjab/INC","Uttar Pradesh/INC","Uttarakhand/INC","Goa/IND","Uttarakhand/IND","Punjab/LIP","Goa/MAG","Manipur/NPEP","Manipur/NPF","Goa/Other","Manipur/Other","Uttar Pradesh/Other","Punjab/SAD","Uttar Pradesh/SP","Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand"],"labels":["1.67","1.71","1.74","2.23","2.23","65.81","2.5","2.56","2.86","3.34","4.71","77.42","7.5","7.5","6.67","6.67","7.5","11.66","12.82","15.71","17.09","32.5","81.43","35.0","42.5","46.67","AAAP","ADAL","AITC","BJP","BJP","BJP","BJP","BJP","BSP","GFP","INC","INC","INC","INC","INC","IND","IND","LIP","MAG","NPEP","NPF","Other","Other","Other","SAD","SP","Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand"],"marker":{"colors":["#636efa","#EF553B","#00cc96","#00cc96","#00cc96","#EF553B","#ab63fa","#EF553B","#FFA15A","#636efa","#00cc96","#00cc96","#ab63fa","#ab63fa","#636efa","#636efa","#ab63fa","#00cc96","#EF553B","#FFA15A","#EF553B","#ab63fa","#FFA15A","#636efa","#ab63fa","#636efa","#EF553B","#00cc96","#636efa","#ab63fa","#636efa","#EF553B","#00cc96","#FFA15A","#00cc96","#ab63fa","#ab63fa","#636efa","#EF553B","#00cc96","#FFA15A","#ab63fa","#FFA15A","#EF553B","#ab63fa","#636efa","#636efa","#ab63fa","#636efa","#00cc96","#EF553B","#00cc96","#ab63fa","#636efa","#EF553B","#00cc96","#FFA15A"]},"name":"","parents":["Manipur/AITC","Punjab/LIP","Uttar Pradesh/INC","Uttar Pradesh/ADAL","Uttar Pradesh/Other","Punjab/INC","Goa/Other","Punjab/BJP","Uttarakhand/IND","Manipur/Other","Uttar Pradesh/BSP","Uttar Pradesh/BJP","Goa/MAG","Goa/GFP","Manipur/NPF","Manipur/NPEP","Goa/IND","Uttar Pradesh/SP","Punjab/SAD","Uttarakhand/INC","Punjab/AAAP","Goa/BJP","Uttarakhand/BJP","Manipur/BJP","Goa/INC","Manipur/INC","Punjab","Uttar Pradesh","Manipur","Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand","Uttar Pradesh","Goa","Goa","Manipur","Punjab","Uttar Pradesh","Uttarakhand","Goa","Uttarakhand","Punjab","Goa","Manipur","Manipur","Goa","Manipur","Uttar Pradesh","Punjab","Uttar Pradesh","","","","",""],"values":[1,2,7,9,9,77,1,3,2,2,19,312,3,3,4,4,3,47,15,11,20,13,57,21,17,28,20,9,1,13,21,3,312,57,19,3,17,28,77,7,11,3,2,2,3,4,4,1,2,9,15,47,40,60,117,403,70],"type":"sunburst","insidetextorientation":"radial"}],                        {"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"legend":{"tracegroupgap":0},"margin":{"t":60}},                        {"responsive": true}                    )                };                            </script>        </div>
+        
+        
+<p style="text-align:left; margin-left:6vw;"><br>Note:<br>- The remaining parties are clubbed under 'Other'</p>
+<hr style="margin:6vw;"/>
+
+
+<div id='5'></div>
+<div style="text-align:center;"><h2>INC and BJP seat share across states</h2><br><br></div>
+
+
+<div class="flex-container_map">
+   
+  <div class="flex-item-left_map">
+       <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>State</th>
+      <th>Party</th>
+      <th>Seats won</th>
+      <th>Total seats</th>
+      <th>Seat share percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Goa</td>
+      <td>INC</td>
+      <td>17</td>
+      <td>40</td>
+      <td>42.50</td>
+    </tr>
+    <tr>
+      <td>Manipur</td>
+      <td>INC</td>
+      <td>28</td>
+      <td>60</td>
+      <td>46.67</td>
+    </tr>
+    <tr>
+      <td>Punjab</td>
+      <td>INC</td>
+      <td>77</td>
+      <td>117</td>
+      <td>65.81</td>
+    </tr>
+    <tr>
+      <td>Uttar Pradesh</td>
+      <td>INC</td>
+      <td>7</td>
+      <td>403</td>
+      <td>1.74</td>
+    </tr>
+    <tr>
+      <td>Uttarakhand</td>
+      <td>INC</td>
+      <td>11</td>
+      <td>70</td>
+      <td>15.71</td>
+    </tr>
+  </tbody>
+</table>
+
+      <iframe id="map" title="INC" aria-label="Map" id="datawrapper-chart-kVAmg" src="https://datawrapper.dwcdn.net/kVAmg/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="754"></iframe>
+      
+      
+      </div>
+   
+  <div class="flex-item-right_map">
+      <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>State</th>
+      <th>Party</th>
+      <th>Seats won</th>
+      <th>Total seats</th>
+      <th>Seat share percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Goa</td>
+      <td>BJP</td>
+      <td>13</td>
+      <td>40</td>
+      <td>32.50</td>
+    </tr>
+    <tr>
+      <td>Manipur</td>
+      <td>BJP</td>
+      <td>21</td>
+      <td>60</td>
+      <td>35.00</td>
+    </tr>
+    <tr>
+      <td>Punjab</td>
+      <td>BJP</td>
+      <td>3</td>
+      <td>117</td>
+      <td>2.56</td>
+    </tr>
+    <tr>
+      <td>Uttar Pradesh</td>
+      <td>BJP</td>
+      <td>312</td>
+      <td>403</td>
+      <td>77.42</td>
+    </tr>
+    <tr>
+      <td>Uttarakhand</td>
+      <td>BJP</td>
+      <td>57</td>
+      <td>70</td>
+      <td>81.43</td>
+    </tr>
+  </tbody>
+</table>
+      <iframe id="map" title="BJP" aria-label="Map" id="datawrapper-chart-yg7Zy" src="https://datawrapper.dwcdn.net/yg7Zy/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="754"></iframe></iframe>
+      
+            
+      </div>
+  
+</div>
+
+
+
+</body>
+</html>
+
