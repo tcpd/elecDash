@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial;
+  font-size:clamp(10px, 8vw, 12px);
+}
+
+#frame{
+	  margin-left:25vw;
+	  width:50vw;
+	  top:5vh;
+	}
+
+#voter{
+	  width:50vw;
+	  margin-left:0vw;
+	}
+	
+#subheading{
+  text-align:center;
+  font-family: Arial;
+  font-size:clamp(10px, 4vw, 30px);
+  }
+	
+#line{
+  margin:4vw;}
+
+#Note{
+  text-align:left; 
+  margin-left:6vw;
+}
+
+#representation{
+  width:40vw;
+  margin-left:5vw;
+  margin-right:auto;
+}
+
+#party_seat{
+   height:50vw;
+   margin-top:0px;
+  }
+
+#back_top{
+  text-align:right;
+  margin-right:5vw;
+  font-size:clamp(10px, 2.5vw, 18px);
+  }
+  
+#title{
+/*  background-color: #ff4c8d; */
+  text-align:center;
+  font-size:clamp(10px, 5vw, 25px);
+  width:80vw;
+  margin-left:10vw;
+  padding:0px 0px 0px 0px;
+  margin-bottom:0px;
+}
+
+ 
+table, th, td {
+  border-collapse: collapse;
+  border-color: #B8B8B8;
+  font-size:clamp(12px, 1vw, 15px);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+
+td:hover {background-color: #787878;}
+
+table{
+margin-left: auto;
+margin-right: auto;
+width: 34vw;
+}
+
+
+#assembly{
+margin-left:10vw;
+width:80vw;
+height:auto;}
+
+#map{
+  width:40vw;
+  margin-left:5vw;
+  margin-top:5vh;
+}
+
+
+.flex-container_map {
+  display: flex;
+  flex-direction: row;
+}
+.flex-item-left_map{
+  flex: 50%;
+  align-items: stretch;
+}
+.flex-item-right_map {
+  flex: 50%;
+  align-items: stretch;
+}
+
+
+
+.lokdhaba_link a {
+  float: right;
+  display: block;
+  color: #B83027;
+  text-align: center;
+  padding: 1vh 2vw 1vh 2vw;
+  text-decoration: none;
+  font-size: clamp(10px, 3vw, 17px);
+  border: 3px solid #B83027;
+  margin:0.5em;
+
+}
+
+.lokdhaba_link a:hover {
+  background-color: #B83027;
+  color: white;
+}
+
+
+#india{
+  width:50vw;
+  max-width:700px;
+}
+
+
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1vh 2vw 1vh 2vw;
+  text-decoration: none;
+  font-size: clamp(10px, 3vw, 17px);
+  border-radius: 20px;
+  background-color: #B83027;
+  margin:0.5em;
+
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+  margin:2px;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media screen and (max-width: 600px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+  
+  #logo_container {
+    width:20vw;
+    margin-left:40vw;
+    max-width:80px;
+    }
+    #logo{
+      width:20vw;
+      height:auto;
+      max-width:100px;
+      }
+  #click_text{
+    font-size:clamp(10px,3vw, 18px);
+    margin-right:5vw;
+    width:90vw;
+    text-align:center;
+    }
+
+  .topnav {
+    overflow: hidden;
+    margin-left:5vw;
+    width:90vw;
+    }
+    }
+
+
+@media (min-width: 600px){
+  
+  #logo_container {
+/*   background-color: #cccc8d; */
+  width:0vw;
+  margin-left:0vw;
+}
+ #logo
+{ height:auto;
+  width:100px;
+  margin-left:calc(50vw - 50px);
+}
+  
+  #click_text{
+/*   background-color: #b5758f; */
+  font-size:clamp(10px,3vw, 18px);
+  margin-top:calc(10vw);
+  text-align:center;
+}
+  
+ #india{
+  width:50vw;
+  max-width:530px;
+} 
+}
+
+@media screen and  (min-width: 1100px) and (max-width:3000px){
+  
+  .topnav {
+  overflow: hidden;
+  position:absolute;
+  display:block;
+}
+
+  #party_seat{
+   height:35vw;
+   margin-top:0px;
+  }
+
+}
+
+@media screen and (max-width: 1100px){
+  .topnav{
+  overflow: hidden;
+  margin-left:calc(6px + 5vw);
+  width:70vw;
+  }
+  
+
+
+
+}
+
+
+
+	
+@media (max-width: 700px){
+	
+	#frame{
+	/*   background-color:#9F2B68; */
+	  margin-left:10vw;
+	  width:80vw;
+	}
+
+	#voter{
+	  width:80vw;
+	  margin-left:0vw;
+	}
+	
+	.flex-container_map {
+          flex-direction: column;
+        }
+ 
+        #map{
+          width:90vw;
+          }
+          
+        #representation{
+          width:90vw;
+          }
+          
+        #party_seat{
+        height:90vw;
+        margin-top:0px;
+  }
+
+	}
+	
