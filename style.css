@@ -95,8 +95,13 @@ width:80vw;
 height:auto;}
 
 #turncoat{
-margin-left:15vw;
-width:70vw;
+margin-left:20vw;
+width:60vw;
+height:auto;}
+
+#subplot{
+margin-left:10vw;
+width:80vw;
 height:auto;}
 
 #map{
@@ -307,8 +312,18 @@ height:auto;}
           text-align:left; 
           margin-top:10vh;
           margin-left:6px;
-  }
+  } 
   
+	#turncoat{
+	margin-left:5vw;
+	width:90vw;
+	height:auto;}
+
+	#subplot{
+	margin-left:0vw;
+	width:100vw;
+	height:auto;}
+	  
 
 	}
 	
