@@ -54,7 +54,6 @@ body{
   text-align:right;
   margin-right:5vw;
   font-size:clamp(10px, 2.5vw, 18px);
-  color:#A020F0;
   text-decoration: None;
   }
   
@@ -86,13 +85,18 @@ td:hover {background-color: #787878;}
 table{
 margin-left: auto;
 margin-right: auto;
-width: 34vw;
+width: 40vw;
 }
 
 
 #assembly{
 margin-left:10vw;
 width:80vw;
+height:auto;}
+
+#turncoat{
+margin-left:20vw;
+width:60vw;
 height:auto;}
 
 #map{
@@ -137,12 +141,29 @@ height:auto;}
 
 
 #india{
+  margin-top:10vh;
   width:50vw;
   max-width:700px;
 }
 
 
-.topnav a {
+.topnav a:nth-child(n){
+
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1vh 2vw 1vh 2vw;
+  text-decoration: none;
+  font-size: clamp(10px, 3vw, 17px);
+  border-radius: 20px;
+  background-color: #800026;
+  margin:0.5em;
+
+}
+
+.topnav a:nth-child(n+6){
+
   float: left;
   display: block;
   color: #f2f2f2;
@@ -156,14 +177,6 @@ height:auto;}
 
 }
 
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
 
 .topnav a:hover, .dropdown:hover .dropbtn {
   background-color: #555;
@@ -294,7 +307,12 @@ height:auto;}
           text-align:left; 
           margin-top:10vh;
           margin-left:6px;
-  }
+  } 
+  
+  #turncoat{
+margin-left:0vw;
+width:100vw;
+height:auto;}
   
 
 	}
