@@ -162,7 +162,7 @@ height:auto;}
 
 }
 
-.topnav a:nth-child(n+8){
+.topnav a:nth-child(n+6){
 
   float: center;
   display: block;
@@ -238,7 +238,7 @@ height:auto;}
   font-size:clamp(10px,3vw, 18px);
   margin-top:calc(10vw);
   text-align:left;
-  margin-left:5vw;
+  margin-left:2vw;
  
 }
   
