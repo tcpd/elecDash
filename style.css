@@ -146,7 +146,7 @@ height:auto;}
 
 
 #india{
-  margin-top:15vh;
+  margin-top:8vh;
   width:50vw;
   max-width:700px;
 }
@@ -241,7 +241,7 @@ height:auto;}
  
   #click_text{
   font-size:clamp(10px,3vw, 18px);
-  margin-top:calc(10vw);
+  margin-top:calc(8vw);
   text-align:left;
   margin-left:2vw;
  
