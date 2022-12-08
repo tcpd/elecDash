@@ -7,11 +7,6 @@ body{
   font-size:clamp(10px, 8vw, 12px);
 }
 
-#smallbr {
-   display: block;
-   margin: 1px 0;
-}
-
 #frame{
 	  margin-left:25vw;
 	  width:50vw;
@@ -146,7 +141,7 @@ height:auto;}
 
 
 #india{
-  margin-top:8vh;
+  margin-top:15vh;
   width:50vw;
   max-width:700px;
 }
@@ -221,7 +216,7 @@ height:auto;}
   .topnav {
     overflow: hidden;
     margin-left:5vw;
-    width:100vw;
+    width:90vw;
     }
   
   #refresh{
@@ -241,7 +236,7 @@ height:auto;}
  
   #click_text{
   font-size:clamp(10px,3vw, 18px);
-  margin-top:calc(8vw);
+  margin-top:calc(10vw);
   text-align:left;
   margin-left:2vw;
  
@@ -281,7 +276,6 @@ height:auto;}
 }
 
 @media screen and (max-width: 1100px){
-  
   .topnav{
   overflow: hidden;
   margin-left:calc(6px + 5vw);
@@ -343,7 +337,7 @@ height:auto;}
 
 	#subplot{
 	  margin-left:0vw;
-	  width:100vw;
+	  width:50vw;
 	  height:auto;
   }
   
