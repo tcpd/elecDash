@@ -39,6 +39,7 @@ body{
   margin-right:auto;
 }
 
+
 #party_seat{
    height:50vw;
    margin-top:0px;
@@ -90,8 +91,8 @@ width:80vw;
 height:auto;}
 
 #turncoat{
-margin-left:20vw;
-width:60vw;
+margin-left:30vw;
+width:40vw;
 height:auto;}
 
 #subplot{
@@ -321,7 +322,9 @@ height:auto;}
   #representation{
     width:90vw;
   }
-          
+  
+
+     
   #party_seat{
     height:90vw;
     margin-top:0px;
@@ -329,8 +332,8 @@ height:auto;}
      
   
 	#turncoat{
-    margin-left:5vw;
-	  width:90vw;
+    margin-left:10vw;
+	  width:80vw;
 	  height:auto;
   }
   
